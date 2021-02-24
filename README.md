@@ -14,7 +14,9 @@
 ![picture alt](https://image.prntscr.com/image/ypAoKCuQRSWsd_gcnko5rA.png "output")
 
 ### Sample
-<iframe src="https://streamable.com/e/b7d6gq?loop=0" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        <div>
+            <iframe src="https://streamable.com/e/b7d6gq?loop=0" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
 
 ## Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
