@@ -8,7 +8,7 @@
 class Voice {
 public:
 	Voice(const std::wstring& text = L"", const int& voiceGender = 1,
-		  const int& voiceSpeed = 0, const int& voiceVolume = 100);
+	      const int& voiceSpeed = 0, const int& voiceVolume = 100);
 	~Voice();
 
 	void initialize();
