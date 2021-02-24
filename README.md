@@ -16,5 +16,8 @@
 ### Sample
 [Click on me](https://streamable.com/e/b7d6gq?loop=0 "SampleVid")
 
+### Download
+[Click on me](https://github.com/AHosseinRnj/TextToSpeech/releases "Releases")
+
 ## Licence
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
