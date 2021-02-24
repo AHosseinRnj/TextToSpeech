@@ -1,7 +1,7 @@
 #include "Voice.h"
 
 Voice::Voice(const std::wstring& text, const int& voiceGender,
-			 const int& voiceSpeed, const int& voiceVolume)
+	     const int& voiceSpeed, const int& voiceVolume)
 {
 	setText(text);
 	setGender(voiceGender);
@@ -42,7 +42,7 @@ void Voice::initialize()
 	LPVOID pvReserved, --> its reserved and must be NULL.
 
 	DWORD  dwCoInit --> specifies the threading model that your program will use.
-						COM supports two different threading models, apartment threaded and multithreaded.
+			    COM supports two different threading models, apartment threaded and multithreaded.
 	*/
 
 	Test = CoInitializeEx(NULL, COINIT_APARTMENTTHREADED);
@@ -57,15 +57,15 @@ void Voice::initialize()
 	REFCLSID  rclsid, --> rclsid The CLSID associated with the data and code that will be used to create the object.
 
 	LPUNKNOWN pUnkOuter, --> if NULL, indicates that the object is not being created as part of an aggregate.
-							 If non-NULL, pointer to the aggregate object's IUnknown interface (the controlling IUnknown).
+				 If non-NULL, pointer to the aggregate object's IUnknown interface (the controlling IUnknown).
 
 	DWORD     dwClsContext, --> Context in which the code that manages the newly created object will run.
-								The values are taken from the enumeration CLSCTX.
+				    The values are taken from the enumeration CLSCTX.
 
 	REFIID    riid, --> a reference to the identifier of the interface to be used to communicate with the object.
 
 	LPVOID    *ppv --> Address of pointer variable that receives the interface pointer requested in riid.
-					   Upon successful return, *ppv contains the requested interface pointer. Upon failure, *ppv contains NULL.
+			   Upon successful return, *ppv contains the requested interface pointer. Upon failure, *ppv contains NULL.
 	*/
 
 	HResult = CoCreateInstance(CLSID_SpVoice, NULL, CLSCTX_ALL, IID_ISpVoice, (void **)&pVoice);
@@ -126,14 +126,14 @@ void Voice::playVoice()
 	https://docs.microsoft.com/en-us/previous-versions/windows/desktop/ms719820(v=vs.85)
 
 	LPCWSTR	 *pwcs, --> [in, string] Pointer to the null-terminated text string (possibly containing XML markup)
-						to be synthesized.
+			    to be synthesized.
 
 	DWORD	 dwFlags, --> [in] Flags used to control the rendering process for this call.
-						  The flag values are contained in the SPEAKFLAGS enumeration.
+			      The flag values are contained in the SPEAKFLAGS enumeration.
 
 	ULONG	 *pulStreamNumber -->  [out] Pointer to a ULONG which receives the current input stream number associated with this Speak request.
-								   Each time a string is spoken, an associated stream number is returned.
-								   Events queued back to the application related to this string will contain this number. If NULL, no value is passed back.
+				       Each time a string is spoken, an associated stream number is returned.
+				       Events queued back to the application related to this string will contain this number. If NULL, no value is passed back.
 	*/
 
 	if (SUCCEEDED(HResult)) {
